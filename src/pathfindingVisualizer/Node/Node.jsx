@@ -5,7 +5,9 @@ import './Node.css';
 export default class Node extends Component {
   render() {
 
-    const{
+    const {
+      row,
+      col,
       isStart,
       isFinish,
     } = this.props;
@@ -17,7 +19,9 @@ export default class Node extends Component {
     : '';
 
     return (
-      <div className={`node ${extraClassName}`}></div>
+      <div
+        id={`node-${row}-${col}`}
+        className={`node ${extraClassName}`}></div>
     );
   }
 }
